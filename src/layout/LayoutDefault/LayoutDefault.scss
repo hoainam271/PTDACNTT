@@ -1,0 +1,107 @@
+.layout-default {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    &__header {
+        background-color: orange;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 40px;
+    }
+
+    &__logo {
+        width: 100px;
+        padding: 0;
+    }
+
+    &__main {
+        padding: 20px;
+    }
+
+    &__footer {
+        background: orange;
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    &__cart {
+
+
+        li {
+            list-style: none;
+        }
+    }
+
+    &__account {
+        display: flex;
+        gap: 20px;
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            font-weight: 700;
+
+            &:hover {
+                color: red ;
+            }
+        }
+
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        margin-right: 80px;
+        display: flex;
+    }
+
+    li {
+        padding: 10px 50px;
+        margin-left: 20px;
+        position: relative;
+
+        :hover {
+            color: red;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+
+    &__sub {
+        position: absolute;
+        top: 100%;
+        background: orangered;
+        right: 0;
+        display: none !important;
+        flex-direction: column;
+
+        li {
+            margin-left: 0 !important;
+        }
+
+        a {
+            white-space: nowrap;
+            display: block;
+            padding: 4px 10px;
+        }
+    }
+
+    li:hover>&__sub {
+        display: flex !important;
+    }
+}
